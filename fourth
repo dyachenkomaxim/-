@@ -1,0 +1,27 @@
+import java.util.Random;
+class fourth {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+        int N = rnd.nextInt(10);
+        int[] array = new int[3];
+        System.out.print("Массив: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rnd.nextInt(10);
+            System.out.print(array[i] + " ");
+        }
+        System.out.println("Число: " + N);
+        func1(N, array);
+    }
+
+    public static void func1(int N, int[] array) {
+        if (array[1] + array[0] == N) {
+            System.out.println("True");
+        } else if (array[1] + array[2] == N) {
+            System.out.println("True");
+        } else if (array[0] + array[2] == N) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+    }
+}
