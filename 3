@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+class theard {
+    public static void main(String[] args) {
+        //Scanner sc = new Scanner(System.in);
+        int N = (int) ((Math.random() * ((99 - 0) + 1)) + 0);
+        int x = (int) ((Math.random() * ((10 - 0) + 1)) + 0);
+        int c = (int) ((Math.random() * ((10 - 0) + 1)) + 0);//генерим случайное от 0 до 10 для длины листа
+        ArrayList<Integer> ints = new ArrayList<>();
+        for (int i = 0; i < x; i++) {
+            ints.add(1);
+        }
+        ArrayList<Integer> ints2 = new ArrayList<>();
+        for (int j = 0; j < c; j++) {
+            ints2.add(5);
+        }
+        func1(N, x, c, ints, ints2);
+    }
+
+    public static void func1(int N, int x, int c, ArrayList<Integer> ints, ArrayList<Integer> ints2) {
+            if (N < 10) {
+                if (N == x) {
+                    System.out.println("True");
+                } else {
+                    System.out.println("False");
+
+                }
+            } else if (N > 9 || N < 100) {
+                if (N / 10 % 10 == x && N % 10 == c) {
+                    System.out.print("True ");
+                } else {
+                    System.out.println("False");
+                }
+            }
+            System.out.println("входное число: " + N);
+            System.out.println("длина листа1: " + x);
+            System.out.println("длина листа2: " + c);
+            System.out.println("1 => " + ints);
+            System.out.println("2 => " + ints2);
+
+
+    }
+}
+
