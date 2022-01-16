@@ -1,0 +1,25 @@
+import java.util.*;
+
+class fift {
+    public static void main(String[] args) {
+        Map<Double, String> student = new HashMap<>();
+        student.put(3.9, "sdasd");
+        student.put(3.4, "Антон");
+        student.put(6.5, "Анна");
+        student.put(5.0, "Илья");
+        student.put(2.9, "София");
+        student.put(3.6, "Екатерина");
+        student.put(1.8, "Даниил");
+        student.put(2.3, "Роман");
+        student.put(4.4, "Ольга");
+        student.put(9.7, "Константин");
+
+        Double max =(Collections.max(student.keySet()));
+        for (Map.Entry<Double, String> entry : student.entrySet()) {
+            if (entry.getKey() == max) {
+                System.out.println(entry.getValue());
+                System.out.println(max);
+            }
+        }
+    }
+}
